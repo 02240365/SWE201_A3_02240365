@@ -1,0 +1,58 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Submit SWE201 Assignment 3",
+      "description": "Build a single-domain CRUD app with RESTful API and global state.",
+      "status": "in-progress",
+      "categoryId": "1",
+      "createdAt": "2026-05-20T09:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Buy groceries",
+      "description": "Milk, eggs, rice, and vegetables for the week.",
+      "status": "todo",
+      "categoryId": "2",
+      "createdAt": "2026-05-21T14:30:00.000Z"
+    },
+    {
+      "id": "3",
+      "title": "Morning workout",
+      "description": "30 minutes cardio and stretching.",
+      "status": "done",
+      "categoryId": "3",
+      "createdAt": "2026-05-22T06:15:00.000Z"
+    },
+    {
+      "title": "Homework",
+      "description": "",
+      "status": "todo",
+      "categoryId": "1",
+      "createdAt": "2026-05-24T11:13:51.877Z",
+      "id": "S-ysy7l"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Study"
+    },
+    {
+      "id": "2",
+      "name": "Shopping"
+    },
+    {
+      "id": "3",
+      "name": "Health"
+    },
+    {
+      "id": "4",
+      "name": "Work"
+    },
+    {
+      "id": "5",
+      "name": "Personal"
+    }
+  ]
+}
