@@ -1,6 +1,8 @@
+# SWE201 - Assignment 3: Single‑domain CRUD app using RESTful API
+
 # Task Manager 
 
-A single-domain CRUD app for **SWE201 – Assignment 3**. Sign in, then create, read, update, and delete tasks — each belonging to a category — backed by a RESTful API.
+A single-domain CRUD app for Task Manager. Sign in, then create, read, update, and delete tasks - each belonging to a category - backed by a RESTful API.
 
 ## At a glance
 
@@ -8,7 +10,7 @@ A single-domain CRUD app for **SWE201 – Assignment 3**. Sign in, then create, 
 |---|---|
 | Domain | Personal Task Manager |
 | Primary entity | **Task** (`id`, `title`, `description`, `status`, `categoryId`, `createdAt`) |
-| Secondary entity | **Category** (`id`, `name`) — a task belongs to one category |
+| Secondary entity | **Category** (`id`, `name`) - a task belongs to one category |
 | Language | TypeScript |
 | Stack | Expo SDK 54, React Native 0.81, React 19.1 |
 | State | Context API + `useReducer` with selector hooks |
@@ -21,9 +23,9 @@ A single-domain CRUD app for **SWE201 – Assignment 3**. Sign in, then create, 
 
 Token-based sign in / sign up; create with client-side validation; list with search and status filtering; single-task detail; edit; delete with confirmation. Loading, empty, and error states everywhere, with distinct messages for validation / server / network failures and a retry button. Three custom hooks: `useAuth`, `useFetchList` (with request cancellation), `useForm`.
 
-## State management — what and why
+## State management - what and why
 
-**Context API + `useReducer`.** The global state is small and bounded (auth, tasks, categories, filter), so this gives a Redux-style reducer/action pattern with **zero extra dependencies**. Screens never touch the store directly — they read through selector hooks (`useTasks`, `useAuthState`, `useTaskById`) and dispatch typed actions, keeping UI and state logic separate. Local UI uses `useState`/`useEffect`.
+**Context API + `useReducer`.** The global state is small and bounded (auth, tasks, categories, filter), so this gives a Redux-style reducer/action pattern with **zero extra dependencies**. Screens never touch the store directly - they read through selector hooks (`useTasks`, `useAuthState`, `useTaskById`) and dispatch typed actions, keeping UI and state logic separate. Local UI uses `useState`/`useEffect`.
 
 ## Project structure
 
@@ -63,20 +65,35 @@ Emulator shortcuts: `npm run android` / `npm run ios`. Type-check anytime with `
 
 ## Screenshots
 
+### **Login Screen** 
+
 ![login](screenshots/login.png)
-**Login Screen** — Token-based sign in / sign up with client-side validation.
+
+- Token-based sign in / sign up with client-side validation.
+
+### **Task List Screen**
 
 ![mytask](screenshots/mytask.png)
-**Task List Screen** — View all tasks with search and status filtering options.
+
+- View all tasks with search and status filtering options.
+
+### **Task Detail Screen**
 
 ![detail](screenshots/details.png)
-**Task Detail Screen** — View task details with options to edit or delete.
+
+- View task details with options to edit or delete.
+
+### **Task Form Screen**
 
 ![newtask](screenshots/newtask.png)
-**Task Form Screen** — Create or edit tasks with category selection and validation.
+
+- Create or edit tasks with category selection and validation.
+
+### **Backend**
 
 ![be](screenshots/be.png)
-**Backend** — JSON Server mock API running on port 3001.
+
+- JSON Server mock API running on port 3001.
 
 ## Known limitations
 
